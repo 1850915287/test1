@@ -13,7 +13,7 @@ namespace ZSZ.DAL.ModelConfig
         public AdminUserConfig()
         {
             ToTable("T_AdminUsers");
-
+            //多加一行注释
             //一般配置到“多”端，因为“一端”可能根本不知道“多端”的存在
             HasOptional(u => u.City).WithMany().HasForeignKey(u => u.CityId)
                 .WillCascadeOnDelete(false);
